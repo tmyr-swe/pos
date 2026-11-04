@@ -1,0 +1,63 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+          cache: maven
+      - name: Verify
+        run: mvn -B verify
+      - name: Database smoke test
+        run: |
+          java --enable-native-access=ALL-UNNAMED \
+            -Dpos.home="$RUNNER_TEMP/smoke" \
+            -Dpos.logs="$RUNNER_TEMP/smoke/logs" \
+            -jar target/chegg-pos.jar --smoke-test
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chegg-pos-jar
+          path: target/chegg-pos.jar
+
+  linux-package:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+          cache: maven
+      - name: Build Linux artifacts
+        run: scripts/package-linux.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chegg-pos-linux
+          path: dist/
+
+  windows-package:
+    needs: test
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+          cache: maven
+      - name: Build Windows artifacts
+        shell: pwsh
+        run: ./scripts/package-windows.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chegg-pos-windows
+          path: dist/

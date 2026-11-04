@@ -1,0 +1,37 @@
+sku,name,category,price_cents,stock,reorder
+BEV-001,Coca-Cola 300ml,Beverages,6000,48,12
+BEV-002,Fanta Orange 300ml,Beverages,6000,36,12
+BEV-003,Dasani Water 500ml,Beverages,5000,60,24
+BEV-004,Keringet Water 1.5L,Beverages,13000,24,10
+BEV-005,Delmonte Mango Juice 1L,Beverages,18000,18,6
+BEV-006,Brookside Fresh Milk 500ml,Beverages,6000,30,12
+SNK-001,Lay's Classic 60g,Snacks,10000,40,12
+SNK-002,Pringles Original 110g,Snacks,35000,12,4
+SNK-003,Digestive Biscuits 250g,Snacks,12000,24,8
+SNK-004,Roasted Peanuts 100g,Snacks,8000,30,10
+SNK-005,Cadbury Dairy Milk 80g,Snacks,15000,20,6
+SNK-006,Glucose Biscuits 100g,Snacks,3000,50,15
+GRO-001,Jogoo Maize Flour 2kg,Groceries,13000,40,15
+GRO-002,Wheat Flour 1kg,Groceries,11000,30,10
+GRO-003,Pishori Rice 1kg,Groceries,18000,35,12
+GRO-004,Sugar 1kg,Groceries,16000,45,15
+GRO-005,Fresh Fri Cooking Oil 1L,Groceries,32000,20,8
+GRO-006,Eggs Tray (30),Groceries,48000,15,5
+HOU-001,Sunlight Bar Soap 175g,Household,7000,40,12
+HOU-002,Omo Detergent 1kg,Household,35000,18,6
+HOU-003,Dishwashing Liquid 500ml,Household,18000,22,8
+HOU-004,Toilet Paper 4-pack,Household,15000,30,10
+HOU-005,Bleach 750ml,Household,12000,20,6
+HOU-006,Cleaning Sponge,Household,4000,50,15
+PER-001,Colgate Toothpaste 100ml,Personal Care,22000,24,8
+PER-002,Toothbrush,Personal Care,8000,40,12
+PER-003,Geisha Bar Soap,Personal Care,6000,45,15
+PER-004,Vaseline 100ml,Personal Care,15000,20,8
+PER-005,Nivea Body Lotion 200ml,Personal Care,30000,12,4
+PER-006,Sanitary Pads 10s,Personal Care,12000,25,8
+STA-001,Exercise Book 200pg,Stationery,6000,60,20
+STA-002,Ballpoint Pen,Stationery,2000,100,30
+STA-003,Pencil,Stationery,1000,100,30
+STA-004,A4 Paper Ream,Stationery,55000,10,3
+STA-005,Glue Stick,Stationery,5000,30,10
+STA-006,Ruler 30cm,Stationery,3000,25,8
